@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>TRC-10 - STABILA Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "TRC-10";
+    var mkdocs_page_input_path = "mechanism-algorithm/trc10.md";
+    var mkdocs_page_url = "/documentation-en/mechanism-algorithm/trc10/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> STABILA Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/">Repository</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dpos/">DPoS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/overview/">Overview</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api/http/">HTTP API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/rpc/">RPC API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mechanism & Algorithm</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../sr/">SR and Committee</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">TRC-10</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#trc-10">TRC-10</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#how-to-issue-a-trc-10-token">How to Issue a TRC-10 Token</a></li>
+        
+            <li><a class="toctree-l4" href="#participate-trc-10-token-issuing">Participate TRC-10 Token Issuing</a></li>
+        
+            <li><a class="toctree-l4" href="#trc-10-token-transfer">TRC-10 Token Transfer</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../account/">Account Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resource/">Resource Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dex/">Decentralized Exchange</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../multi-signatures/">Multi-Signature</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../shielded-TRC20-contract/">Shielded TRC20 Contract</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../system-contracts/">System Contracts</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../architecture/network/">Network</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../architecture/database/">Database</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../architecture/event/">Event Subsystem</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Smart Contract</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../contracts/svm/">SVM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contracts/compiler/">Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contracts/contract/">Contract</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contracts/trc20/">TRC-20</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../developers/official-public-nodes/">Official Public Nodes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/deployment/">Deployment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/run-in-idea/">Run FullNode in IDEA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/litefullnode/">Run Lite FullNode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/archive-manifest/">Leveldb Startup Optimization Plugins</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/resources/">Resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/contribution/">Contribution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/incentives/">Incentive Policy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/java-stabila/">Java-Stabila</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/tips/">TIPs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/advanced-configuration/">Advanced Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../developers/gpg/">Contact Us (GPG Key)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Clients</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../clients/wallet-cli/">Wallet-cli</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../clients/stabila-grid/">StabilaGrid</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Releases</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../releases/">Binary Integrity Check</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../glossary/">Glossary</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">STABILA Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Mechanism & Algorithm &raquo;</li>
+        
+      
+    
+    <li>TRC-10</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/stabilaprotocol/documentation-en/edit/master/docs/mechanism-algorithm/trc10.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="trc-10">TRC-10<a class="headerlink" href="#trc-10" title="Permanent link">&para;</a></h1>
+<p>STABILA network supports two types of tokens, one is TRC-20 token issued by smart contract, the other one is TRC-10 token issued by system contract.</p>
+<h2 id="how-to-issue-a-trc-10-token">How to Issue a TRC-10 Token<a class="headerlink" href="#how-to-issue-a-trc-10-token" title="Permanent link">&para;</a></h2>
+<p>HTTP API:</p>
+<div class="codehilite"><pre><span></span>wallet/createassetissue
+Description: Issue a token
+demo: curl -X POST http://127.0.0.1:8090/wallet/createassetissue -d &#39;{
+  &quot;owner_address&quot;:&quot;41e552f6487585c2b58bc2c9bb4492bc1f17132cd0&quot;,
+  &quot;name&quot;:&quot;0x6173736574497373756531353330383934333132313538&quot;,
+  &quot;abbr&quot;: &quot;0x6162627231353330383934333132313538&quot;,
+  &quot;total_supply&quot; :4321,
+  &quot;stb_num&quot;:1,
+  &quot;num&quot;:1,
+  &quot;start_time&quot; : 1530894315158,
+  &quot;end_time&quot;:1533894312158,
+  &quot;description&quot;:&quot;007570646174654e616d6531353330363038383733343633&quot;,
+  &quot;url&quot;:&quot;007570646174654e616d6531353330363038383733343633&quot;,
+  &quot;free_asset_net_limit&quot;:10000,
+  &quot;public_free_asset_net_limit&quot;:10000,
+  &quot;cded_supply&quot;:{&quot;cded_amount&quot;:1, &quot;cded_days&quot;:2}
+}&#39;
+
+Parameter owner_address: Owner address, default hexString
+Parameter name: Token name, default hexString
+Parameter abbr: Token name abbreviation, default hexString
+Parameter total_supply: Token total supply
+Parameter stb_num: Define the price by the ratio of stb_num/num,
+Parameter num: Define the price by the ratio of stb_num/num
+Parameter start_time: ICO start time
+Parameter end_time: ICO end time
+Parameter description: Token description, default hexString
+Parameter url: Token official website url, default hexString
+Parameter free_asset_net_limit: The free bandwidth limit of each token holder
+Parameter public_free_asset_net_limit: The total free bandwidth limit of the Token
+Parameter cded_supply: Token staked supply
+Parameter permission_id: Optional, for multi-signature use
+Return: Transaction object
+Note: The unit of &#39;stb_num&#39; is UNIT
+</pre></div>
+
+
+<h2 id="participate-trc-10-token-issuing">Participate TRC-10 Token Issuing<a class="headerlink" href="#participate-trc-10-token-issuing" title="Permanent link">&para;</a></h2>
+<p>HTTP API:</p>
+<div class="codehilite"><pre><span></span>wallet/participateassetissue
+Description: Participate a token issuing
+demo: curl -X POST http://127.0.0.1:8090/wallet/participateassetissue -d &#39;{
+  &quot;to_address&quot;: &quot;41e552f6487585c2b58bc2c9bb4492bc1f17132cd0&quot;,
+  &quot;owner_address&quot;:&quot;41e472f387585c2b58bc2c9bb4492bc1f17342cd1&quot;,
+  &quot;amount&quot;:100,
+  &quot;asset_name&quot;:&quot;3230313271756265696a696e67&quot;
+}&#39;
+
+Parameter to_address: The issuer address of the token, default hexString
+Parameter owner_address: The participant address, default hexString
+Parameter amount: Participate token amount
+Parameter asset_name: Token id, default hexString
+Parameter permission_id: Optional, for multi-signature use
+Return: Transaction object
+Note: The unit of &#39;amount&#39; is the smallest unit of the token
+</pre></div>
+
+
+<h2 id="trc-10-token-transfer">TRC-10 Token Transfer<a class="headerlink" href="#trc-10-token-transfer" title="Permanent link">&para;</a></h2>
+<p>HTTP API:</p>
+<div class="codehilite"><pre><span></span>wallet/transferasset
+Description: Transfer token
+demo: curl -X POST http://127.0.0.1:8090/wallet/transferasset -d &#39;{
+  &quot;owner_address&quot;:&quot;41d1e7a6bc354106cb410e65ff8b181c600ff14292&quot;,
+  &quot;to_address&quot;: &quot;41e552f6487585c2b58bc2c9bb4492bc1f17132cd0&quot;,
+  &quot;asset_name&quot;: &quot;31303030303031&quot;,
+  &quot;amount&quot;: 100
+}&#39;
+
+Parameter owner_address: Owner address, default hexString
+Parameter to_address: To address, default hexString
+Parameter asset_name: Token id number encoded as hexString
+Parameter amount: Token transfer amount
+Parameter permission_id: Optional, for multi-signature use
+Return: Transaction object
+Note: The unit of &#39;amount&#39; is the smallest unit of the token
+</pre></div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../account/" class="btn btn-neutral float-right" title="Account Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../sr/" class="btn btn-neutral" title="SR and Committee"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/stabilaprotocol/documentation-en/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../sr/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../account/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

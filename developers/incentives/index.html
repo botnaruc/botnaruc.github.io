@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Incentive Policy - STABILA Documentation</title>
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Incentive Policy";
+    var mkdocs_page_input_path = "developers/incentives.md";
+    var mkdocs_page_url = "/documentation-en/developers/incentives/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> STABILA Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Introduction</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/">Repository</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dpos/">DPoS</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/overview/">Overview</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api/http/">HTTP API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/rpc/">RPC API</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mechanism & Algorithm</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/sr/">SR and Committee</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/trc10/">TRC-10</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/account/">Account Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/resource/">Resource Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/dex/">Decentralized Exchange</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/multi-signatures/">Multi-Signature</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/shielded-TRC20-contract/">Shielded TRC20 Contract</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../mechanism-algorithm/system-contracts/">System Contracts</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Architecture</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../architecture/network/">Network</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../architecture/database/">Database</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../architecture/event/">Event Subsystem</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Smart Contract</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../contracts/svm/">SVM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contracts/compiler/">Compiler</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contracts/contract/">Contract</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../contracts/trc20/">TRC-20</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Developers</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../official-public-nodes/">Official Public Nodes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../deployment/">Deployment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../run-in-idea/">Run FullNode in IDEA</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../litefullnode/">Run Lite FullNode</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../archive-manifest/">Leveldb Startup Optimization Plugins</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../resources/">Resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../contribution/">Contribution</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Incentive Policy</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#community-developers-incentives-programme">Community Developers Incentives Programme</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#non-code-related">Non-code Related</a></li>
+        
+            <li><a class="toctree-l4" href="#code-related">Code Related</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../java-stabila/">Java-Stabila</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tips/">TIPs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../advanced-configuration/">Advanced Configuration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gpg/">Contact Us (GPG Key)</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Clients</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../clients/wallet-cli/">Wallet-cli</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../clients/stabila-grid/">StabilaGrid</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Releases</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../releases/">Binary Integrity Check</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../glossary/">Glossary</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">STABILA Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Developers &raquo;</li>
+        
+      
+    
+    <li>Incentive Policy</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/stabilaprotocol/documentation-en/edit/master/docs/developers/incentives.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="community-developers-incentives-programme">Community Developers Incentives Programme<a class="headerlink" href="#community-developers-incentives-programme" title="Permanent link">&para;</a></h1>
+<p>Bonus point applies in STABILA incentives programme. Developers can earn points by contributing to STABILA.</p>
+<p>When a issue (or PR) is closed, it will be added into the reward programme. The core devs will discuss and comment the issue (or PR), the points of a issue (or PR) received will be added in the comment to track.</p>
+<p>You can find your points ranking at <a href="https://stabilascan.org/#/developersreward">Stabilascan</a>.</p>
+<p>Reward 1:</p>
+<p>At the end of every month, we will calculate all points each developer gets in the current month and who finish in Top 5 will be rewarded with cash.</p>
+<p>At the end of every year, we will calculate all points each developer gets in the current year and who finish in Top 5 will be rewarded with cash.</p>
+<p>The Top 5 developers who win the cash reward will be announced at Stabilascan.</p>
+<p>Also, there is a chance to display developers' photos at STABILA official website.</p>
+<table>
+<thead>
+<tr>
+<th>No. 1</th>
+<th>No. 2</th>
+<th>No. 3</th>
+<th>No. 4</th>
+<th>No. 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 USD</td>
+<td>180 USD</td>
+<td>150 USD</td>
+<td>120 ~ 140 USD</td>
+<td>100 ~ 120 USD</td>
+</tr>
+</tbody>
+</table>
+<p>Reward 2:</p>
+<p>Every developer who participates java-stabila's developement will be honored with a STABILA Honorary Developer Certificate. And we will give a vote of thanks to the developers on STABILA official website.</p>
+<p>The following shows the content you can contribute to.</p>
+<h2 id="non-code-related">Non-code Related<a class="headerlink" href="#non-code-related" title="Permanent link">&para;</a></h2>
+<p><strong> 1. TIP </strong></p>
+<p>Description: STABILA Improvement Proposal(TIP)
+Scope: Any improvement related to STABILA ecosystem, like a new feature, TRC, protocol improvement, programming tool, etc.
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>15</td>
+<td>10</td>
+<td>&lt; 5</td>
+</tr>
+</tbody>
+</table>
+<p><strong> 2. Documentation  </strong></p>
+<p>Description: To revise, update and add technical documentation related to STABILA network.
+Scope: mechanism and algorithm, network architecture and database, contracts and other technical documentation
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>15</td>
+<td>10</td>
+<td>&lt; 5</td>
+</tr>
+</tbody>
+</table>
+<p><strong> 3. Issue </strong></p>
+<p>Description: Create a topic about a question, enhancement, bug or feature and so on to discuss
+Scope: java-stabila, STABILA ecosystem
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>8</td>
+<td>5</td>
+<td>&lt; 2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-related">Code Related<a class="headerlink" href="#code-related" title="Permanent link">&para;</a></h2>
+<p><strong> 1. Feature Development </strong></p>
+<p>Description: To add new features to STABILA network
+Scope: java-stabila, wallet-cli
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>80</td>
+<td>50</td>
+<td>&lt; 20</td>
+</tr>
+</tbody>
+</table>
+<p><strong> 2. Bug Report </strong></p>
+<p>Description: To report bugs in online STABILA network
+Scope: java-stabila, wallet-cli
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>15</td>
+<td>10</td>
+<td>&lt; 5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3. Bug Fix</strong></p>
+<p>Description: To fix bugs in online STABILA network
+Scope: java-stabila, wallet-cli
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>40</td>
+<td>30</td>
+<td>20</td>
+<td>&lt; 10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>4. Security Related</strong></p>
+<p>Description: To find the security risks and enhance the security of STABILA network and ecosystem
+Scope: java-stabila, STABILA ecosystem
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>80</td>
+<td>50</td>
+<td>&lt; 20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>5. Others</strong></p>
+<p>Description: Code improvements, etc.
+Scope: java-stabila, wallet-cli
+Points:</p>
+<table>
+<thead>
+<tr>
+<th>Critical</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>15</td>
+<td>10</td>
+<td>&lt; 5</td>
+</tr>
+</tbody>
+</table>
+<p>In order to get 5 (or more) points, the content of a PR should be creative, pratical, critical or can reflect significant workload.</p>
+<p>One PR should aim at solving one type of problems, so do not break one type of PR into many small PRs.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../java-stabila/" class="btn btn-neutral float-right" title="Java-Stabila">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../contribution/" class="btn btn-neutral" title="Contribution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/stabilaprotocol/documentation-en/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../contribution/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../java-stabila/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
